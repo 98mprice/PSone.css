@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="description" content="PSone.css is a Playstation 1 style CSS Framework." />
+    <meta name="keywords" content="html5,css,framework,Playstation" />
+    <meta name="author" content="© 2018 Micah Price" />
+    <link rel="shortcut icon" type="image/png" href="favicon.png">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="./meta/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./meta/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./meta/favicon-16x16.png">
+    <link rel="manifest" href="./meta/site.webmanifest">
+    <link rel="mask-icon" href="./meta/safari-pinned-tab.svg" color="#E03C34">
+    <meta name="msapplication-TileColor" content="#E03C34">
+    <meta name="theme-color" content="#E03C34">
+
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="PSOne.css" />
+    <meta property="og:url" content="https://98mprice.github.io/PSone.css/" />
+    <meta property="og:description" content="PSOne-style CSS Framework" />
+    <meta property="og:image" content="./meta/favicon-16x16.png" />
+    <link rel="stylesheet" type="text/css" href="PSone.css">
+    <style>
+      .play {
+        font-family:"Play";
+      }
+      .logo {
+        margin: 0 2rem 0 2rem;
+        height: 50px;
+      }
+      .fork-me {
+        position: absolute;
+        right: 0;
+        top: 0;
+      }
+      @media only screen and (max-width: 768px) {
+        .play > .logo {
+          height: 50px;
+          margin-bottom: 40px;
+        }
+        .play {
+          margin-left: 1rem;
+        }
+        .container {
+          width: 90%;
+        }
+        .buttons {
+          display: flex;
+          flex-flow: column wrap;
+          align-items: center;
+        }
+        .containers {
+          width: calc(100% - .5em);
+        }
+        .title {
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          box-sizing: border-box;
+          width: 260px;
+          height: 24px;
+          font-size: 50px;
+          line-height: 0px;
+        }
+        .progress:not(:first-child) {
+          margin-top: 35px;
+        }
+        .progress:first-child {
+          margin-top: 10px;
+        }
+        .controller-buttons {
+          margin: 1rem;
+          display: flex;
+          align-items: center;
+          flex-flow: row wrap;
+        }
+        .progress > .subtitle {
+          position: absolute;
+          top: .44em;
+          left: 20%;
+          display: block;
+        }
+        h1 {
+          font-size: 1.7em;
+        }
+        .footer {
+          text-align: center;
+        }
+        .logo {
+          margin-top: .5em;
+        }
+        .fork-me {
+          top: .5em;
+        }
+        .input {
+          width: 90%;
+        }
+      }
+      @media only screen and (min-width: 769px) {
+        .progress > .subtitle {
+          position: absolute;
+          top: .44em;
+          left: 15%;
+          display: block;
+        }
+        .controller-buttons {
+          margin: 1rem;
+          display: flex;
+          align-items: center;
+          flex-flow: row wrap;
+        }
+      }
+      @media only screen and (min-width: 320px)  and (max-width: 321px) {
+        body {
+          width: calc(100% + .5em)
+        }
+        h1 {
+          font-size: 1.7em;
+        }
+      }
+    </style>
+
+    <title>PSone.css</title>
+  </head>
+
+  <body>
+    <header style="position: relative;">
+      <div style="display:flex;align-items:center;flex-flow:row wrap;">
+        <img class="logo" src="logo.png"></img>
+        <h1 class="play">PSone.css</h1>
+      </div>
+      <p>Playstation 1 style CSS Framework, inspired by <a href="https://bcrikko.github.io/NES.css/">NES.css</a>.</p>
+      <p class="fork-me"><a href="https://github.com/98mprice/PSone.css">Fork me!</a></p>
+    </header>
+
+    <section class="container with-title">
+      <h2 class="title">Buttons</h2>
+      <div style="margin: 1rem;" class="buttons">
+        <button type="button" style="margin-bottom: .4em" class="btn">Normal</button>
+        <button type="button" style="margin-bottom: .4em" class="btn primary">Primary</button>
+        <button type="button" style="margin-bottom: .4em" class="btn success">Success</button>
+        <button type="button" style="margin-bottom: .4em" class="btn warning">Warning</button>
+        <button type="button" class="btn error">Error</button>
+          <button type="button" class="btn" disabled>Disabled</button>
+      </div>
+    </section>
+
+    <section class="container">
+      <h2 class="title">Containers</h2>
+      <div class="containers">
+        <div class="container">
+          <label class="title">Default</label>
+          <p>Kick! Punch! It's all in the mind.</p>
+        </div>
+        <div class="container dark">
+          <label class="title">dark</label>
+          <p>You see, the island is the site of a secret nuclear
+          weapons disposal facility.</p>
+        </div>
+        <div class="container light">
+          <label class="title">light</label>
+          <p>Crash, Crash? Are you there Crash? ... Are you there Crash?</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="container">
+      <h2 class="title">Progress bars</h2>
+      <div style="margin: 1rem;" class="progresses">
+        <div class="progress">
+          <div class="bar" style="width: 80%"></div>
+          <div class="subtitle">Default</div>
+        </div>
+        <div class="progress primary">
+          <div class="bar" style="width: 100%"></div>
+          <div class="subtitle">primary</div>
+        </div>
+        <div class="progress success">
+          <div class="bar" style="width: 40%"></div>
+          <div class="subtitle">success</div>
+        </div>
+        <div class="progress warning">
+          <div class="bar" style="width: 60%"></div>
+          <div class="subtitle">warning</div>
+        </div>
+        <div class="progress error">
+          <div class="bar" style="width: 20%"></div>
+          <div class="subtitle">error</div>
+        </div>
+        <div class="progress indeterminate">
+          <div class="bar"></div>
+          <div class="subtitle">indeterminate</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="container">
+      <h2 class="title">Radios</h2>
+      <div style="margin: 1rem;margin-top: 0;" class="radio">
+        <label>
+          <input type="radio" name="test" value="small" checked>
+          <span class="option">Yes
+            <span class="click"></span>
+          </span>
+        </label>
+        <label>
+          <input type="radio" name="test" value="big">
+          <span class="option">No
+            <span class="click"></span>
+          </span>
+        </label>
+      </div>
+    </section>
+
+    <section class="form container">
+      <h2 class="title">Forms</h2>
+      <div class="field">
+        <label>Default</label>
+        <input type="text" class="input">
+      </div>
+      <div class="field is-inline">
+        <label>With placeholder</label>
+        <input type="text" class="input" placeholder="Jill Valentine">
+      </div>
+      <div class="field">
+        <label>Disabled</label>
+        <input type="text" class="input" placeholder="Disabled" disabled>
+      </div>
+    </section>
+
+    <section class="container">
+      <h2 class="title">Icons</h2>
+      <section class="container" style="max-width:100%">
+        <h3 class="title">Dance Dance Revolution</h3>
+        <div style="margin: 1rem;">
+          <i class="icon ddr1"></i>
+          <i class="icon ddr2"></i>
+          <i class="icon ddr3"></i>
+        </div>
+        <h3 class="title">Controller Buttons</h3>
+        <div class="controller-buttons">
+          <div style="margin-right:.1em">
+            <i class="icon square clickable"></i>
+          </div>
+          <div style="margin-right:.1em;">
+            <i class="icon triangle clickable"></i>
+          </div>
+          <div style="margin-right:.1em;">
+            <i class="icon circle clickable"></i>
+          </div>
+          <div style="margin-right:.4em;">
+            <i class="icon x clickable"></i>
+          </div>
+          <div style="margin-right:.1em">
+            <i class="icon arrow-left"></i>
+          </div>
+          <div style="margin-right:.2em">
+            <i class="icon arrow-right"></i>
+          </div>
+          <div style="margin-right:.1em;margin-left:.1em">
+            <i class="icon arrow-down"></i>
+          </div>
+          <div style="margin-right:.4em">
+            <i class="icon arrow-up"></i>
+          </div>
+          <div style="margin-right:.4em">
+            <i class="icon start start-label"></i>
+          </div>
+          <div style="margin-right:.4em">
+            <i class="icon select select-label"></i>
+          </div>
+          <div style="margin-right:.1em">
+            <i class="icon l1"></i>
+          </div>
+          <div style="margin-right:.4em">
+            <i class="icon r1"></i>
+          </div>
+          <div style="margin-right:.1em">
+            <i class="icon l2"></i>
+          </div>
+          <div style="margin-right:.4em">
+            <i class="icon r2"></i>
+          </div>
+          <div style="margin-right:.1em">
+            <i class="icon l3"></i>
+          </div>
+          <div style="margin-right:.4em">
+            <i class="icon r3"></i>
+          </div>
+          <div style="margin-right:.1em">
+            <i class="icon psone"></i>
+          </div>
+        </div>
+      </section>
+    </section>
+
+
+    <footer class="footer">
+      <p>
+        Made with ♥ by <a href="https://github.com/98mprice">98mprice</a>, <a href="https://github.com/guastallaigor">guastallaigor</a>.
+        Special thanks to <a href="https://twitter.com/bc_rikko">bc_rikko</a>. <a id="white" href="https://coindataflow.com/en">Browsing around here</a>, you can find few more similar projects.
+      </p>
+    </footer>
+  </body>
+</html>
